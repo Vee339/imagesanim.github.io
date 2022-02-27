@@ -1,0 +1,92 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    user-select:none;
+    /*  border:1px solid rgb(10, 88, 10);*/
+}
+section{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+section :is(.previous,.next){
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+section .previous{
+    left: 12%;
+}
+section .next{
+    right: 12%;
+}
+section :is(.previous,.next) i{
+    font-weight: 900;
+    font-size: 150px;
+    color: #d8e2dc;
+    transition:0.2s;
+}
+section :is(.previous,.next):hover i{
+    color: #b7beba;
+    transition:0.2s;
+}
+section .container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:900px;
+    height:600px;
+    display:flex;
+    flex-wrap:wrap;
+}
+section .container.first{
+    z-index: 5;
+}
+section .container.second{
+    z-index: 4;
+}
+section .container.third{
+    z-index: 3;
+}
+section .container.fourth{
+    z-index: 2;
+}
+section .container.fifth{
+    z-index: 1;
+}
+
+section .container .imgBox{
+    width:50%;
+    height:50%;
+    position:relative;
+    overflow:hidden;
+}
+section .container .imgBox img{
+    position:absolute;
+    width:200%;
+    height:200%;
+    object-fit:cover;
+}
+section .container .imgBox.first img{
+   top:0;
+   left:0;
+}
+section .container .imgBox.second img{
+    top:0;
+    right:0;
+ }
+ section .container .imgBox.third img{
+    bottom:0;
+    left:0;
+   display:block;
+ }
+ section .container .imgBox.fourth img{
+    right:0;
+    bottom:0;
+ }
+ 
