@@ -1,7 +1,6 @@
 const prev = document.querySelector('.previous')
 const next = document.querySelector('.next')
 var container = document.getElementsByClassName('container')
-var firstimg = container[a]
 //console.log(container)
 next.addEventListener("click",function(){
 	for(a = 0; a < container.length; a++){
